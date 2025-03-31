@@ -2,12 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>StudentManagement</title>
+  <title>Compulynx Student Management</title>
+  <style>
+    /* General Snackbar Styling */
+.custom-snackbar {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Error Snackbar */
+  .error-snackbar {
+    background: #f44336 !important; /* Red background */
+    color: white !important;
+    border-left: 6px solid #d32f2f;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  /* Success Snackbar */
+  .success-snackbar {
+    background: #4caf50 !important; /* Green background */
+    color: white !important;
+    border-left: 6px solid #388e3c;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  /* Snackbar Button */
+  .custom-snackbar .mat-button-wrapper {
+    color: white !important;
+    font-weight: bold;
+  }
+  
+  /* Slide-in Animation */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  </style>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
 </body>
 </html>
