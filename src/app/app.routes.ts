@@ -10,7 +10,7 @@ export const routes: Routes = [
 {
     path: 'dashboard',
     component: DashboardComponent,
-  children: [
+    children: [
     {
       path: '',
       component: StatisticsComponent

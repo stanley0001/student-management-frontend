@@ -11,7 +11,7 @@ import { PasswordChange } from './auth/changePasswordRequest';
 })
 export class HttpService {
 
-  private ApiUrl = "http://localhost:8086/api/v1";
+  private ApiUrl = "http://localhost:8086/api/v2";
 
   constructor(private http: HttpClient) {}
 
@@ -22,6 +22,9 @@ export class HttpService {
     return this.http.get<ResponseModel>(`${this.ApiUrl}/auth/profile`);
   }
 
+  public getDashStats() : Observable<ResponseModel> {
+    return this.http.get<ResponseModel>(`${this.ApiUrl}/reports/dashboard-stats`)
+  }
   public changePassword(auth: PasswordChange): Observable<ResponseModel> {
     return this.http.post<ResponseModel>(`${this.ApiUrl}/auth/password-change`, auth);
   }

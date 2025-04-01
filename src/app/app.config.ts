@@ -16,7 +16,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatChipsModule } from '@angular/material/chips';
 
-
+import { httpInterceptorInterceptor } from './interceptors/http-interceptor.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
 
@@ -26,6 +26,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), 
     provideHttpClient(), 
     provideHttpClient(
+      withInterceptors([httpInterceptorInterceptor])
     ),
     provideAnimationsAsync(), 
     CommonModule,
